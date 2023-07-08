@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cloudassignmentac4="clr-namespace:CloudAssignmentAC4"
+             xmlns:models="clr-namespace:CloudAssignmentAC4"
+             x:Class="CloudAssignmentAC4.MainPage"
+             x:DataType="cloudassignmentac4:MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+             
+            <!--<ListView ItemsSource="{Binding UploadedImages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Image Source="{Binding FileName}" WidthRequest="100" HeightRequest="100" />
+                                <Label Text="{Binding FileName}" FontAttributes="Bold" />
+                                <Button Text="Download" Command="{Binding BindingContext.DownloadImageCommand, Source={x:Reference Name=MainPage}}" CommandParameter="{Binding DownloadUrl}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            <ListView ItemsSource="{Binding UploadedImages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+           
+             <Label Text="Upload File"/>
+            <Button Text="Select File" Clicked="OnSelectFileClicked" />
+            <Label Text="{Binding SelectedImage.FileName}" />
+
+            <Label Text="{Binding UploadProgress}"/>
+                
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
